@@ -43,7 +43,7 @@ import java.util.List;
 
         }
 
-        @Test(enabled = true)
+        @Test(enabled = true,groups={"Stress"})
         public void reportaddtest() throws InterruptedException {
             dr.get("http://fits.qauber.com/#/page/login");
             Thread.sleep(6000);
@@ -177,6 +177,27 @@ import java.util.List;
 
 
             }
+        }
+
+        @Test(groups={"smoke"})
+        public void test2(){
+
+            System.out.println("This is Test2");
+            System.out.println("Hi");
+            System.out.println("How are You");
+
+        }
+        @Test(groups={"smoke"})
+        public void test3()throws ArithmeticException
+
+        {
+            int a = 5;
+            int b = 0;
+            System.out.println(a / b);
+        }
+        @Test(timeOut=2000,groups={"smoke"})
+        public void timeout() throws InterruptedException {
+            Thread.sleep(4000);
         }
 
         @AfterClass

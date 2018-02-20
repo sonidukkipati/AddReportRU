@@ -29,7 +29,7 @@ import java.security.SecureRandom;
             return createEntity;
         }
 
-        private CreateEntity createEntity;
+        public CreateEntity createEntity;
 
         public EntityInviteRAUPaySub getEntityInviteRAUPaySub() {
             return entityInviteRAUPaySub;
